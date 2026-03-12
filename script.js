@@ -1,4 +1,5 @@
-//your JS code here. If required.
+document.addEventListener("DOMContentLoaded", function(){
+
 const bands = [
 'The Plot in You',
 'The Devil Wears Prada',
@@ -15,18 +16,17 @@ const bands = [
 'An Old Dog'
 ];
 
-// function to remove articles
 function strip(band){
   return band.replace(/^(a |an |the )/i, '').trim();
 }
 
-// sort bands
-const sortedBands = bands.sort((a, b) => {
+const sortedBands = bands.sort((a,b)=>{
   if(strip(a) > strip(b)) return 1;
   if(strip(a) < strip(b)) return -1;
   return 0;
 });
 
-// display on webpage
 document.getElementById("band").innerHTML =
-  sortedBands.map(band => `<li>${band}</li>`).join("");
+sortedBands.map(band => `<li>${band}</li>`).join("");
+
+});
