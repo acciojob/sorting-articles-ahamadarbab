@@ -26,7 +26,7 @@ const sortedBands = bands.sort((a,b)=>{
   return 0;
 });
 
-document.getElementById("band").innerHTML =
+document.getElementById("bands").innerHTML =
 sortedBands.map(band => `<li>${band}</li>`).join("");
 
 });
